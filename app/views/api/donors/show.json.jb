@@ -1,0 +1,5 @@
+{
+  id: @donor.id,
+  name: @donor.donor_name + @donor.donor_surname,
+  email: @donor.email
+}

@@ -1,0 +1,7 @@
+@donors.map do |donor|
+  {
+    id: donor.id,
+    name: donor.name + donor.donor_surname,
+    email: donor.email
+  }
+end
