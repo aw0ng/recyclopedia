@@ -1,0 +1,10 @@
+@items.map do |item|
+  {
+    id: item.id,
+    item: item.item_name,
+    quantity: item.quantity,
+    condition: item.condition,
+    cateogry: item.category_id,
+    donor: item.donor_id
+  }
+end
