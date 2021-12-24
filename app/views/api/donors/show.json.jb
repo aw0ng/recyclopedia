@@ -2,5 +2,6 @@
   id: @donor.id,
   first_name: @donor.donor_name,
   last_name: @donor.donor_surname,
-  email: @donor.email
+  email: @donor.email,
+  image: @donor.image
 }
