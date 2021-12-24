@@ -5,6 +5,7 @@
     quantity: item.quantity,
     condition: item.condition,
     cateogry: item.category_id,
-    donor: item.donor_id
+    donor: item.donor_id,
+    image: item.image
   }
 end
