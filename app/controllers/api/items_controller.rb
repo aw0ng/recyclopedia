@@ -10,7 +10,8 @@ class Api::ItemsController < ApplicationController
       quantity: params[:quantity],
       condition: params[:condition],
       category: params[:category_id],
-      donor: params[:donor_id]
+      donor: params[:donor_id],
+      image: params[:image]
     )
     @item.save
     render "show.json.jb"
@@ -28,6 +29,7 @@ class Api::ItemsController < ApplicationController
     @item.condition = params[:condition] || @item.condition
     @item.category_id = params[:category_id] || @item.category_id
     @item.donor_id = params[:donor_id] || @item.donor_id
+    @item.image = params[:image] || @item.image
     @item.save
     render "show.json.jb"
   end
