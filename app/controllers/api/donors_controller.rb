@@ -8,7 +8,8 @@ class Api::DonorsController < ApplicationController
     @donor = Donor.new(
       email: params[:email],
       donor_name: params[:donor_name],
-      donor_surname: params[:donor_surname]
+      donor_surname: params[:donor_surname],
+      image: params[:image]
     )
     @donor.save
     render "show.json.jb"
@@ -24,6 +25,7 @@ class Api::DonorsController < ApplicationController
     @donor.email = params[:email] || @donor.email
     @donor.donor_name = params[:donor_name] || @donor.donor_name
     @donor.donor_surname = params[:donor_surname] || @donor.donor_surname
+    @donor.image = params[:image] || @donor.image
     @donor.save
     render "show.json.jb"
   end
