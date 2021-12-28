@@ -5,5 +5,5 @@
   condition: @item.condition,
   cateogry: @item.category_id,
   donor: @item.donor_id,
-  item: @item.image
+  image: @item.image
 }
