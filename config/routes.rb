@@ -20,5 +20,7 @@ Rails.application.routes.draw do
 
     get "/donations" => "donations#index"
     get "/donations/:id" => "donations#show"
+
+    post "/sessions" => "sessions#create"
   end
 end

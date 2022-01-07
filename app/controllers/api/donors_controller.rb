@@ -5,7 +5,7 @@ class Api::DonorsController < ApplicationController
   end
 
   def create
-    donor = Donor.new(
+    @donor = Donor.new(
       email: params[:email],
       donor_name: params[:donor_name],
       donor_surname: params[:donor_surname],
@@ -13,7 +13,7 @@ class Api::DonorsController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
-    if donor.save
+    if @donor.save
       render json: { message: "Donor created successfully" }, status: :created
     else
       render json: { errors: donor.errors.full_messages }, status: :bad_request
