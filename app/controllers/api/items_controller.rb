@@ -1,4 +1,6 @@
 class Api::ItemsController < ApplicationController
+  before_action :authenticate_donor
+  
   def index
     @items = Item.all
     render "index.json.jb"
