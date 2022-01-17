@@ -1,0 +1,4 @@
+{
+  id: @receiver.id,
+  receiver_name: @receiver.receiver_name,
+}

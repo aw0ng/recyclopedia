@@ -1,0 +1,6 @@
+@receivers.map do |receiver|
+  {
+    id: receiver.id,
+    receiver_name: receiver.receiver_name
+  }
+end
