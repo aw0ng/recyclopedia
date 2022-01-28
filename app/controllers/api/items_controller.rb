@@ -7,7 +7,7 @@ class Api::ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(
+    item = Item.new(
       name: params[:item_name],
       quantity: params[:quantity],
       condition: params[:condition],
@@ -15,12 +15,12 @@ class Api::ItemsController < ApplicationController
       donor: params[:donor_id],
       image: params[:image]
     )
-    @item.save
+    item.save
     render "show.json.jb"
   end
 
   def show
-    @item = Item.find_by(id: params[:id])
+    @item = Item.where(donor_id: params[:donor_id])
     render "show.json.jb"
   end
 
